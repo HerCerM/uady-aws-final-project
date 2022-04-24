@@ -1,6 +1,9 @@
 package hercerm.college.uadyawsfinalproject.model.validation;
 
 public class Patterns {
+
+    private Patterns() {}
+
     // Implementation notes:
     // "\\p{L}" identifies all Unicode characters belonging to the 'letter' category.
     // Learn more: http://www.regular-expressions.info/unicode.html#prop

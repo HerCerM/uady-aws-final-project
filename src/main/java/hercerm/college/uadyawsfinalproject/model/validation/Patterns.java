@@ -1,8 +1,10 @@
 package hercerm.college.uadyawsfinalproject.model.validation;
 
-public class Patterns {
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
-    private Patterns() {}
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class Patterns {
 
     // Implementation notes:
     // "\\p{L}" identifies all Unicode characters belonging to the 'letter' category.

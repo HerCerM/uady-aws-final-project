@@ -1,14 +1,15 @@
 package hercerm.college.uadyawsfinalproject.util;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class BeanUtils extends org.springframework.beans.BeanUtils {
-
-    private BeanUtils() {}
 
     // Helper method used to ignore null properties on BeanUtils.copyProperties.
     // See: https://stackoverflow.com/a/19739041/12591546

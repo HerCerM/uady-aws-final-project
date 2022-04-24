@@ -1,10 +1,8 @@
 package hercerm.college.uadyawsfinalproject.controller;
 
 import hercerm.college.uadyawsfinalproject.model.Student;
-import hercerm.college.uadyawsfinalproject.model.validation.NullAllowed;
 import hercerm.college.uadyawsfinalproject.service.StudentService;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;

@@ -22,7 +22,7 @@ public class Student {
     @NotBlank
     String matricula;
 
-    @DecimalMax(value = "100")
-    @DecimalMin(value = "0")
+    @DecimalMax("100")
+    @DecimalMin("0")
     Double promedio;
 }

@@ -1,1 +1,6 @@
-
+# Documentation of server configuration attributes:
+# https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#appendix.application-properties.server
+server:
+  error:
+    include-binding-errors: always
+    include-message: always

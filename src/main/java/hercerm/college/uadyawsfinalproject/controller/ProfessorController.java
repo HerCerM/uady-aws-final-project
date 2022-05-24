@@ -38,8 +38,8 @@ public class ProfessorController {
     }
 
     @PutMapping("/{id}")
-    public Professor updateProfessor(@RequestBody @Valid Professor professor) {
-        return professorService.update(professor);
+    public Professor updateProfessor(@RequestBody @Valid Professor professor, @PathVariable Long id) {
+        return professorService.update(professor, id);
     }
 
     @DeleteMapping("/{id}")

@@ -3,6 +3,7 @@ package hercerm.college.uadyawsfinalproject.model;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -12,7 +13,7 @@ import javax.validation.constraints.Positive;
 @Data
 public class Professor {
     @Id
-    @NotNull
+    @GeneratedValue
     Long id;
 
     @NotBlank

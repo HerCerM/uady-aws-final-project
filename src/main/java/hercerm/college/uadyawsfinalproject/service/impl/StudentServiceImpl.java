@@ -36,7 +36,9 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student update(Student student) {
+    public Student update(Student student, Long id) {
+        Student storedStudent = getById(id).orElseThrow(EntityNotFoundException::new);
+        student.setId(storedStudent.getId());
         return studentRepository.save(student);
     }
 

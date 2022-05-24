@@ -3,6 +3,7 @@ package hercerm.college.uadyawsfinalproject.model;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.*;
 
@@ -10,7 +11,7 @@ import javax.validation.constraints.*;
 @Data
 public class Student {
     @Id
-    @NotNull
+    @GeneratedValue
     Long id;
 
     @NotBlank

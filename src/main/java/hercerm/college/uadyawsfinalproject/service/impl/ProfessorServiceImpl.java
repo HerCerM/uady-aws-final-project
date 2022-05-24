@@ -1,6 +1,7 @@
 package hercerm.college.uadyawsfinalproject.service.impl;
 
 import hercerm.college.uadyawsfinalproject.model.Professor;
+import hercerm.college.uadyawsfinalproject.model.Student;
 import hercerm.college.uadyawsfinalproject.repository.ProfessorRepository;
 import hercerm.college.uadyawsfinalproject.service.ProfessorService;
 import org.springframework.stereotype.Service;
@@ -36,7 +37,9 @@ public class ProfessorServiceImpl implements ProfessorService {
     }
 
     @Override
-    public Professor update(Professor professor) {
+    public Professor update(Professor professor, Long id) {
+        Professor storedProfessor = getById(id).orElseThrow(EntityNotFoundException::new);
+        professor.setId(storedProfessor.getId());
         return professorRepository.save(professor);
     }
 

@@ -1,7 +1,7 @@
 # Documentation of server configuration attributes:
 # https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#appendix.application-properties.server
 server:
-  port: 80
+  port: 8080
   error:
     include-binding-errors: always
     include-message: always

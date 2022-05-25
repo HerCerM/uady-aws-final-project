@@ -5,3 +5,9 @@ server:
   error:
     include-binding-errors: always
     include-message: always
+
+aws:
+  access-key-id: ASIA5RUITBSAN3MLMVNW
+  aws-secret-access-key: Ovz/YQsIAN/jVRkNTAfuR8Bkbu9UkNTkGSHuCV6L
+  aws-session-token: FwoGZXIvYXdzELb//////////wEaDKHnh2OhQTPJFqxsEyLAASSoZoLZchff7RbZvYBc9QfmDvFOuPBiCzw+c+2NqJBWMfUdBRcDxgQRp+TDZcVkH04OvtxaARIv4btE7tv5z+P/Dy/hYTPkSdqIQA7KCi7Ixj6gRjKDva0oa0fEuAF9gWSuLP0Radye+ncfJdzAFfYyMcIpv4YKP74S+D8vv6W7VIFgLsx4zcna+E/40bzLOAGUKUd2TWMs4yVXHXanXHJIe2gttmxUDFybQ/YzlbjBGOHS6YR0Xi6U+nNkAGJRiyi9wbiUBjItFkM9Gcpyny1ng7SLu2EK4c/OLsUOwnA/S0pSaMTEth//Ss46/NRqnuU/Regu
+  student-bucket-name: hcervera-uady-aws-final-project-s3-bucket-1

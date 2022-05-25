@@ -26,4 +26,6 @@ public class Student {
     @DecimalMax("100")
     @DecimalMin("0")
     Double promedio;
+
+    String fotoPerfilUrl;
 }

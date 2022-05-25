@@ -34,6 +34,9 @@ dependencies {
     // Developer convenience
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+
+    // AWS
+    implementation 'com.amazonaws:aws-java-sdk-s3:1.12.226'
 }
 
 tasks.named('test') {

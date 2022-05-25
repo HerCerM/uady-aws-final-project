@@ -4,8 +4,10 @@ import hercerm.college.uadyawsfinalproject.model.Student;
 import hercerm.college.uadyawsfinalproject.service.StudentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,6 +47,13 @@ public class StudentController {
     @DeleteMapping("/{id}")
     public void deleteStudent(@PathVariable Long id) {
         studentService.deleteById(id);
+    }
+
+    @PostMapping("/{id}/fotoPerfil")
+    public Student uploadStudentProfilePicture(@RequestParam("foto") MultipartFile file, @PathVariable Long id)
+            throws IOException {
+
+        return studentService.uploadProfilePicture(file, id);
     }
 }
 

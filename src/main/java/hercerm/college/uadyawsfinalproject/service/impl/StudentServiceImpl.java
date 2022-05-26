@@ -1,5 +1,6 @@
 package hercerm.college.uadyawsfinalproject.service.impl;
 
+import com.amazonaws.SdkClientException;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicSessionCredentials;
 import com.amazonaws.regions.Regions;
@@ -12,6 +13,7 @@ import hercerm.college.uadyawsfinalproject.config.AwsConfig;
 import hercerm.college.uadyawsfinalproject.model.Student;
 import hercerm.college.uadyawsfinalproject.repository.StudentRepository;
 import hercerm.college.uadyawsfinalproject.service.StudentService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -20,6 +22,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
+@Slf4j
 @Service
 public class StudentServiceImpl implements StudentService {
 
@@ -83,7 +86,12 @@ public class StudentServiceImpl implements StudentService {
             awsConfig.getStudentBucketName(), s3ObjectKey, file.getInputStream(), objectMetadata)
             .withCannedAcl(CannedAccessControlList.PublicRead);
 
-        s3.putObject(putObjectRequest);
+        try {
+            s3.putObject(putObjectRequest);
+        } catch (SdkClientException e) {
+            log.error("Could not upload file to S3", e);
+            throw e;
+        }
 
         storedStudent.setFotoPerfilUrl(String.format("https://%s.s3.amazonaws.com/%s",
             awsConfig.getStudentBucketName(), s3ObjectKey).replaceAll("\\s", "+"));

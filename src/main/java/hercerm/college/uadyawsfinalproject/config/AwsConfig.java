@@ -11,7 +11,7 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:application.yml")
 public class AwsConfig {
     String accessKeyId;
-    String awsSecretAccessKey;
-    String awsSessionToken;
+    String secretAccessKey;
+    String sessionToken;
     String studentBucketName;
 }

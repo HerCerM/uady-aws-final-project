@@ -67,7 +67,7 @@ public class StudentServiceImpl implements StudentService {
         Student storedStudent = getById(id).orElseThrow(EntityNotFoundException::new);
 
         BasicSessionCredentials awsCredentials = new BasicSessionCredentials(
-            awsConfig.getAccessKeyId(), awsConfig.getAwsSecretAccessKey(), awsConfig.getAwsSessionToken());
+            awsConfig.getAccessKeyId(), awsConfig.getSecretAccessKey(), awsConfig.getSessionToken());
 
         AmazonS3 s3 = AmazonS3ClientBuilder.standard()
             .withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
